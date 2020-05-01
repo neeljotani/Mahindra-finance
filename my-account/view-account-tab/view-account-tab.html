@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bolero Loan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab [root]="accountDetail" [rootParams]="accountData" tabTitle="Account Details"></ion-tab>
+    <ion-tab [root]="accountRepaymentDetail" [rootParams]="accountData" tabTitle="Repayment Details"></ion-tab>
+   </ion-tabs>
+</ion-content>

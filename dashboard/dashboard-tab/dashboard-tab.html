@@ -1,0 +1,30 @@
+<ion-header class="main-header">
+	<ion-navbar hideBackButton="true">
+		<div class="mahLogo">
+			<img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo2" alt="mahindra">
+		</div>
+
+
+
+		<!-- <div class="popOverNav"><img src="assets/imgs/SVG/Kabab_menu_dropdown0.svg" width="3" height="18"></div> -->
+		<div class="icon-Offline" *ngIf="isOffline()"><img src="assets/imgs/SVG/offline0.svg" (click)="presentOfflineInfo()" width="20" height="20"></div>
+
+
+		<ion-buttons end>
+			<button ion-button class="kababMenu" icon-only (click)="presentPopover($event)">
+				<div class="popOverNav"><img src="assets/imgs/SVG/Kabab_menu_dropdown.svg" width="3" height="18"></div>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div class="alert-box" *ngIf="isOffline()">
+		<h4>{{'You are offline' | translate}}</h4>
+		<p>{{'Showing details as per' | translate}} {{lastLoginDate | date : 'dd MMM yyyy, h:mm a'}}</p>
+	</div>
+	<ion-tabs #myTabs selectedIndex="0" [ngClass]="isOffline() ? 'relatviePosition' : 'absolutePosition'">
+		<ion-tab [root]="homeTab" tabTitle="{{'Home' | translate}}" tabIcon="chat"></ion-tab>
+		<ion-tab [root]="myAccountTab" tabTitle="{{'My Account' | translate}}" tabIcon="chat"></ion-tab>
+	</ion-tabs>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header  class="main-header">
+	<ion-navbar>
+		<div class="mahLogo">
+			<img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo2" alt="mahindra">
+		</div>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<div class="enterRegBox">
+		<div class="phone-pad">
+			<img src="assets/imgs/SVG/regi_sync_faiiled_main0.svg" width="50" height="97" alt="mahindra">
+		</div>
+		<h4>{{'Enter the mobile number registered' | translate}}<br> {{'with Mahindra Finance' | translate}}</h4>
+		<ion-item>
+			<ion-input type="number" [(ngModel)]="mobileNo" pattern="\d*" maxLength="10" limit-to="10" placeholder="Eg. 9876543210 " (ionFocus)="clearPassword($event)"></ion-input>
+		</ion-item>
+
+		<p>{{'You will receive an OTP on the' | translate}} <br> {{'above number' | translate}}</p>
+		<button ion-button color="dark" text-center (click)="otpVerifPage()">{{'OK' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+		<a class="not-remember-box flex-wrap">{{'Forgot register Number' | translate}}</a>
+	</div>
+</ion-content>

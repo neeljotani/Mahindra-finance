@@ -1,0 +1,29 @@
+<ion-header  class="main-header">
+	<ion-navbar>
+		<div class="mahLogo" text-center>
+			<img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo1" alt="mahindra">
+		</div>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="login-landing">
+		<div class="user-blog">
+			<h4>{{'New User' | translate }}?</h4>
+			<button ion-button color="dark" (click)="enterRegNumber()">{{'Register' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg"
+				 width="11" height="9"></button>
+			<p>{{'One time quick registration process' | translate}}</p>
+		</div>
+
+		<h5>{{'or' | translate}}</h5>
+
+		<div class="user-blog">
+			<h4>{{'Already Registered' | translate}}?</h4>
+			<button ion-button color="dark" (click)="loginWidthMobilePinPage()">{{'LOG IN' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg"
+				 width="11" height="9"></button>
+			<p>{{'Log in with App PIN' | translate}}</p>
+		</div>
+	</div>
+</ion-content>

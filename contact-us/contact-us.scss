@@ -1,0 +1,58 @@
+page-contact-us {
+    .excutiveDetList{
+        margin-top: 20px;
+        ion-card{
+            margin: 0 15px 10px !important;
+            width: calc(100% - 30px) !important;
+            box-shadow: none !important;
+            border: 1px solid #e9e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            ion-card-content{
+                padding: 0px !important;
+                font-size: 14px;
+                color: #000;
+                line-height: 16px;
+                .grid{
+                    padding:0px;
+                    .col{
+                        padding: 0px;
+                        .mailIcon{
+                            font-size: 2em;
+                            color: #444;
+                        }
+                        .rowTitle{
+                            font-size: 12px;
+                            color: #747474;
+                        }
+                        .button{
+                            min-width: auto;
+                            height: 34px;
+                        }
+                        .btnLocate{
+                            margin-top: 15px;
+                            padding-left: 10px;                            
+                            float: right;
+                            img{
+                                margin-right: 10px;
+                            }
+                        }
+                        .btnCall{
+                            min-width: 65px;
+                            padding: 0;
+                            margin: 0 0 0 auto;
+                            a{
+                                text-decoration: none !important;
+                                color: #fff !important;
+                            }
+                            .icon{
+                                margin-right: 5px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

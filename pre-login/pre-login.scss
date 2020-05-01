@@ -1,0 +1,39 @@
+page-pre-login {
+    ion-header{
+        box-shadow: none;
+        background: transparent;
+    }
+    .login-landing{
+        margin-top: 30px;
+    }
+    .user-blog {
+        text-align: center;
+        
+        h4 {
+            color: #262626;
+            font-size: 16px;            
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding-bottom: 10px;
+            text-transform: capitalize;
+        }
+        p {
+            color: #6c6d70;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 12px;
+            margin: 0px;
+            text-transform: capitalize;
+        }
+    }
+    h5 {
+        color: #636363;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 40px 0;
+        background: url(../assets/imgs/border-line.png) no-repeat;
+        background-position: 50% 50%;
+    }
+}

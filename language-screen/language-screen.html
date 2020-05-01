@@ -1,0 +1,40 @@
+<ion-header [hidden]="fromMenuBar"  class="main-header">
+    <ion-navbar>
+        <div class="mahLogo" text-center>
+            <img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo1" alt="mahindra">
+          </div>
+    </ion-navbar>
+</ion-header>
+  
+  
+  <ion-content padding>
+      <div class="choose-lang-select">
+          <!-- <img src="images/hindi-lang.png" class="img-responsive"> -->
+          <h5>भाषा चुनें</h5>
+          <h4>Choose Language</h4>
+          <p>You can change it later</p>
+          </div>
+          <div class="a-suggestion">
+            <img src="assets/imgs/SVG/Language_light0.svg" width="128" height="92">
+          </div>
+          <div class="selected-lang">
+              <ion-list radio-group [(ngModel)]="selectedLanguage">
+                
+              
+                  <ion-item class="langEngl">
+                    <ion-label>English</ion-label>
+                    <ion-radio checked="true" value="en"></ion-radio>
+                  </ion-item>
+                
+                  <ion-item class="langHindi">
+                    <ion-label>हिंदी | Hindi</ion-label>
+                    <ion-radio value="hn"></ion-radio>
+                  </ion-item>
+  
+                  </ion-list>
+            
+           
+          </div>
+          <button ion-button color="dark" text-center (click)="next()">{{'OK' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+  </ion-content>
+  

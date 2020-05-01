@@ -1,0 +1,87 @@
+page-pre-approved-loan-offer {
+    .centerText{
+        text-align: center;
+    }
+    .preApprovList{
+        ul {
+            padding: 20px 0 0 0;
+            margin: 0px;
+            li{
+                text-align: center;
+                display: inline-block;
+                width: 32%;
+                margin: 0px;
+                padding: 0px;
+                p{
+                    margin: 8px 0 0 0;
+                    color: #898989;
+                    font-size: 11px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .preapprove-individualList{
+        margin-top: 30px;
+        .preapprove-individualbox{
+            /* height: 128px; */
+            border-radius: 5px;
+            border: 3px dotted #ccc;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            .grid{
+                padding: 0px;
+                .preApprovTitle{
+                    color: #898989;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding-top: 5px;
+                    //text-transform: capitalize;
+                    padding: 15px 20px;
+
+                    span {
+                        display: block;
+                        font-weight: 100;
+                        font-size: 11px;
+                        color: #898989;
+                    }
+                }
+                .preApprovValue{
+                    color: #484848;
+                    font-weight: bold;
+                    font-size: 28px;
+                    
+                    //text-transform: capitalize;
+                    text-align: right;
+                    padding: 15px 10px;
+                    small {
+                        font-size: 12px;
+                        margin-left: -5px;
+                        &.rupeetext {
+                            font-size: 21px;
+                            text-transform: capitalize;
+                        }
+                    }
+                    span {
+                        display: block;
+                        font-weight: 100;
+                        font-size: 11px;
+                        color: #898989;
+                    }
+                }
+            }
+            .btnView{
+                min-width: 122px;
+                margin-bottom: 13px;
+                .button-inner {
+                    font-size: 12px;
+                    text-transform: capitalize;
+                    font-weight: normal;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+    
+}

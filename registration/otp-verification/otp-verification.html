@@ -1,0 +1,33 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-navbar>
+			<ion-title>{{'Verification' | translate}}</ion-title>
+		</ion-navbar>
+	</ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+	<p>{{'An OTP has been sent on the' | translate}} <br> {{'mobile number' | translate}}</p>
+	<h4>{{mobileNo}}</h4>
+	<img src="assets/imgs/SVG/OTP Verification main0.svg" width="210" height="209" alt="mahindra" class="phone-circle">
+	<img src="assets/imgs/SVG/OTP Tick0.svg" width="210" height="209" alt="mahindra" class="phone-circle-right">
+
+	<div class="otp-input-box">
+		<ion-item>
+			<ion-label color="primary" stacked>{{'Enter the OTP here' | translate}}</ion-label>
+			<ion-input type="number" pattern="\d*" [(ngModel)]="otp" limit-to="6" (ionChange)="onOTPChange($event)" (ionFocus)="clearOTP($event)"></ion-input>
+		</ion-item>
+
+
+	</div>
+	<!-- <span class="error-text">Please enter correct OTP</span> -->
+	<button ion-button color="dark" text-center class="btnSubmit" (click)="nextPage()">{{'Submit' | translate}} <img
+		 src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+	<h5 *ngIf="!showLink">{{'OTP expires in' | translate}} {{minleft}}:{{timeleft}} {{'minutes' | translate}}</h5>
+	<h5>{{'Did not receive OTP' | translate }} ?</h5>
+	<button ion-button color="primary" text-center clear class="btnResend" (click)="sendOTP()" [ngClass]="showLink ? 'normalOTP' : 'disabledOTP'">{{'Resend OTP' | translate}}</button>
+</ion-content>

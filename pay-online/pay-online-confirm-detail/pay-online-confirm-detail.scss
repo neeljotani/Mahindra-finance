@@ -1,0 +1,78 @@
+page-pay-online-confirm-detail {
+    letter-spacing: 0.5px;
+    h4 {
+        color: #6d6e71;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .breadcrumb-howtopay {
+        padding: 10px 0 20px;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        li {
+            width: 32%;
+            position: relative;
+            list-style: none;
+            text-align: center;
+            padding: 7px 0 0;
+            p {
+                color: #6d6e71;
+                font-size: 11px;
+                padding-top: 7px;
+                opacity: 0.7;
+                text-transform: capitalize;
+                margin: 0px;
+            }
+            &.active{
+                p {
+                    color: #323232;
+                    font-size: 11px;
+                    margin: 0px;
+                    opacity: 1;
+                }
+            }
+            &::before {
+                background: #dcdbdb;
+                content: "";
+                position: absolute;
+                top: 19px;
+                display: inline-block;
+                z-index: -1;
+                height: 2px;
+                width: 100%;
+            }
+            &:nth-child(1)::before {
+                width: 64%;
+            }
+            &:nth-child(2)::before {
+                height: 2px;
+                width: 100%;
+                left: 0px;
+            }
+            &:nth-child(3)::before {
+                left: 0;
+                width: 50%;
+            } 
+        }
+    }
+
+    .payonline-confirmdetails {
+        padding: 15px;
+        h5 {
+            color: #323232;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: capitalize;
+            margin: 0;
+        }
+    }
+    .btnContue {
+        margin-top: 25px;
+    }
+}

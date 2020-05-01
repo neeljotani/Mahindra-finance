@@ -1,0 +1,126 @@
+page-app-introduction {
+    ion-header{
+        box-shadow: none;
+    }
+    h6 {
+        font-weight: bold;
+        font-size: 16px;
+        color: #262626;
+        text-align: center;
+        padding: 10px 0 25px;
+        margin: 0px;
+        text-transform: capitalize;
+    }
+    .splashicon-panel {
+        display: table;
+        margin: 0 auto;
+        ul{
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            li {
+                display: inline-block;
+                width: 49%;
+                vertical-align: top;
+                padding-bottom: 15px;
+                .individualspalsh-box {
+                    background: #f7f7f7;
+                    border: 1px solid #e7e7e7;
+                    border-radius: 5px;
+                    text-align: center;
+                    position: relative;
+                    margin: 0 6px;
+                    min-height: 155px;
+                    
+                    
+                    h5 {
+                        padding-top: 6px;
+                        font-weight: bold;
+                        color: #6c6d70;
+                        font-size: 16px;
+                        margin: 0px;
+                        text-transform: capitalize;
+                    }
+                    p {
+                        padding: 6px 0 21px;
+                        color: #898989;
+                        font-size: 10px;
+                        margin: 0px;
+                        text-transform: capitalize;
+                    }
+                    
+                }
+                .viewsplash-content{
+                    img {
+                        margin-top: 27px;
+                    }
+                    /* &::after {
+                        width: 0;
+                        height: 0;
+                        border-top: 15px solid #e7e7e7;
+                        border-left: 15px solid transparent;
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: -13px;
+                    } */
+                    
+                }
+                .growsplash-content{
+                    img {
+                        padding-top: 22px;
+                    }
+                    /* &::after {
+                        width: 0;
+                        height: 0;
+                        border-top: 15px solid #e7e7e7;
+                        border-left: 15px solid transparent;
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: -13px;
+                    } */
+                } 
+                .paysplash-content{
+                    img {
+                        padding-top: 22px;
+                    }
+                   /*  &::after {
+                        width: 0;
+                        height: 0;
+                        border-top: 15px solid #e7e7e7;
+                        border-right: 15px solid transparent;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -13px;
+                    } */
+                    
+                }
+                .findsplash-content{
+                    img{
+                        padding-top: 22px;
+                    }
+                    /* .handicon-splash {
+                        position: absolute;
+                        left: -18px;
+                        bottom: -60px;
+                        padding: 0px;
+                    } */
+                }
+            }
+        }
+    }
+    .middlefix-mobimg {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin-top: -51px;
+    }
+    .btnContinue{
+        display: block;
+        margin: 60px auto 0;
+    }
+}

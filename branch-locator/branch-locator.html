@@ -1,0 +1,56 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{'Mahindra Finance Branches' | translate}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="cashpayment-topwrap">
+        <img src="assets/imgs/SVG/mahindra_finance_branches_with_red_dot0.svg" width="56" height="40" alt="">
+        <div class="cashpaytop-rghtcontent">
+            <p>{{'Visit Mahindra Finance branch to make payments, meet our executive or get any other support' |
+                translate}}.</p>
+        </div>
+        <!--End of the cash payment top right content-->
+    </div>
+
+    <div class="locInptBox">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>{{'Enter pincode or use current location' | translate}}</ion-label>
+                <ion-input type="number" [(ngModel)]="pincode"></ion-input>
+            </ion-item>
+
+        </ion-list>
+        <img src="assets/imgs/SVG/location0.svg" width="23" height="24" alt="gps" (click)="getPincodeViaUserLocation()" class="iconLocation">
+    </div>
+
+    <ion-list>
+        <button ion-button small color="dark" text-center class="btnLogin" (click)="getBranchDetails()">{{'Search' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>    
+    </ion-list>
+    <div *ngIf="showDetails">
+        <h3>{{'Your Nearest Branches' | translate}}</h3>
+        <ion-card class="cashPointCard" *ngFor="let detail of branchDetails">
+            <ion-card-header>
+                {{detail.location}}
+            </ion-card-header>
+            <ion-card-content>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-12>
+                            <h4>{{detail.address}}</h4>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>
+                            <h4>{{'Contact' | translate}} : {{detail.contact}}</h4>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

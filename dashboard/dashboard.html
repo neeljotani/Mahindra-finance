@@ -1,0 +1,100 @@
+<ion-content>
+	<div class="homeSlide">
+		<ion-slides pager *ngIf="showSlides">
+			<ion-slide *ngFor="let details of extraDetails.vehicalAccountDetails">
+				<div class="emi-details-box">
+					<ion-card>
+						<ion-card-header>
+							<h4>{{details.vehicle_model_name}}</h4>
+							<h4>{{details.vehicle_registration_no}}</h4>
+						</ion-card-header>
+						<ion-card-content>
+							<ion-grid>
+								<ion-row>
+									<ion-col col-6 class="loadAmtSect">
+										<p>{{'Next EMI Date' | translate}}</p>
+										<h3>{{details.next_emi_due_Date | date : 'dd MMM yyyy'}}</h3>
+									</ion-col>
+									<ion-col col-6>
+										<p>{{'EMI Amount' | translate}}</p>
+										<h3>₹ {{details.emi_amount}}</h3>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<button ion-button class="btnViewDet btnViewDark">{{'Pay Now' | translate}}</button>
+									</ion-col>
+									<ion-col col-6>
+										<button ion-button class="btnViewDet btnViewLight" (click)="viewLoanDetails(details)">{{'View Details' | translate}}</button>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</ion-card-content>
+					</ion-card>
+				</div>
+
+			</ion-slide>
+		</ion-slides>
+	</div>
+	<div class="serviceList">
+		<ion-grid>
+
+			<ion-row>
+				<ion-col col-6>
+					<ion-card>
+						<img src="assets/imgs/dash/payonline.svg" class="icons" />
+						<ion-card-title>
+							{{'Pay Online' | translate}}
+						</ion-card-title>
+					</ion-card>
+				</ion-col>
+				<ion-col col-6>
+					<ion-card (click)="openPage('preApprovedLoan')">
+						<img src="assets/imgs/dash/pre_approved_loan.svg" class="icons" />
+						<ion-card-title>
+							{{'Pre-Approved Loan' | translate}}
+						</ion-card-title>
+					</ion-card>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-6>
+					<ion-card (click)="openPage('cashPaymentPoint')">
+						<img src="assets/imgs/dash/cash_payment_points.svg" class="icons" />
+						<ion-card-title>
+							{{'Cash Payment Points' | translate}}
+						</ion-card-title>
+					</ion-card>
+				</ion-col>
+				<ion-col col-6>
+					<ion-card (click)="openPage('branchLocator')">
+						<img src="assets/imgs/dash/Mahindra_Finance_branch.svg" class="icons" />
+						<ion-card-title>
+							{{'Mahindra Finance Branch' | translate}}
+						</ion-card-title>
+					</ion-card>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-6>
+					<ion-card (click)="openPage('callExecutive')">
+						<img src="assets/imgs/dash/Call_executive.svg" class="icons" />
+						<ion-card-title>
+							{{'Call Executive' | translate}}
+						</ion-card-title>
+					</ion-card>
+				</ion-col>
+				<ion-col col-6>
+					<!-- <ion-card>
+						<img src="assets/imgs/SVG/add_another_account0.svg" class="icons" />
+						<ion-card-title>
+							{{'Add Another Account' | translate}}
+						</ion-card-title>
+					</ion-card> -->
+				</ion-col>
+			</ion-row>
+
+		</ion-grid>
+
+	</div>
+</ion-content>

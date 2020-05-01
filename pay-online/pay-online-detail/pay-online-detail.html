@@ -1,0 +1,75 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-navbar>
+      <ion-title>Pay Online</ion-title>
+    </ion-navbar>
+  </ion-navbar>
+ 
+
+</ion-header>
+
+
+<ion-content>
+  <h4>How to Pay</h4>
+  <ul class="breadcrumb-howtopay">
+    <li class="active">
+        <img src="assets/imgs/SVG/select_amount_dark0.svg" 
+        width="26" height="26">
+        <p>Select <br /> Amount</p>
+    </li>
+    <li class="">
+        <img src="assets/imgs/SVG/confirm_details_light0.svg" width="25" height="25">
+        <p>Confirm <br /> Details</p>
+    </li>
+    <li class="">
+        <img src="assets/imgs/SVG/choose_payment_mode_dark_light0.svg" width="25" height="25">
+        <p>Choose <br /> Payment Mode</p>
+    </li>
+        
+    </ul>
+    <div class="payonlien-btmwrapper">
+      <h5>Loan Account Number</h5>
+      <h6>The loan account for which you want to make a payment</h6>
+      <ion-list class="accountDropdown selectDropdown">
+        <ion-item>
+          <!-- <ion-label>Gaming</ion-label> -->
+          <ion-select [(ngModel)]="accountNumber" placeholder="Select Or Enter Loan Account Number">
+            <ion-option value="nes">2156982858522</ion-option>
+            <ion-option value="n64">854798569895</ion-option>
+            <ion-option value="ps">2156982858522</ion-option>
+            <ion-option value="genesis">854798569895</ion-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <div class="amountWayBox">
+        <ion-list radio-group>
+          <ion-list-header>
+            Select amount you want to pay
+          </ion-list-header>
+        
+          <ion-item>
+            <ion-radio checked="true" value="go" item-left></ion-radio>
+            <ion-label>EMI Amount</ion-label>
+            <ion-input placeholder="" value="₹ 2,300"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Outstanding EMI Amount</ion-label>
+            <ion-radio value="rust" item-left></ion-radio>
+            <ion-input placeholder="Text Input" value="₹ 42,300"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Other Amount</ion-label>
+            <ion-radio value="python" item-left></ion-radio>
+            <!-- <ion-input placeholder="Text Input"></ion-input> -->
+          </ion-item>
+        </ion-list>
+      </div>
+
+    </div>
+    <button ion-button color="dark" class="btnContue" (click)="payConfirmDetPage()">Contunie<img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+</ion-content>

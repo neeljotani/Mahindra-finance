@@ -1,0 +1,40 @@
+<ion-header>
+	<ion-navbar>
+		<div class="mahLogo">
+			<img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo2" alt="mahindra">
+		</div>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="pinheading-toppanel">
+		<h6>{{'Set a 4-digit App PIN' | translate}}</h6>
+		<span> {{'You can use it to Login' | translate}}</span>
+	</div>
+	<div class="otp-input-box">
+		<!-- <ion-item>
+			<ion-input type="number" limit-to="4"></ion-input>
+		</ion-item> -->
+		<ion-item>
+			<ion-label color="primary" stacked>{{'Enter the 4 digits' | translate}}</ion-label>
+			<ion-input type="number" [ngClass]="hidePin ? 'secured' : 'unsecured'" pattern="\d*" name="password" [(ngModel)]="pin" limit-to="4" (ionChange)="onKeyPressed($event,'#eyeIcon1')" (ionFocus)="clearPin($event)"></ion-input>
+			<button color="dark" ion-button clear item-end (click)='showPin()' class="btnView" id="eyeIcon">
+				<ion-icon name="eye" style="font-size:26px;"></ion-icon>
+			</button>
+		</ion-item>
+
+		<ion-item style="margin-top: 35px">
+			<ion-label color="primary" stacked>{{'Re-enter the 4 digits' | translate}}</ion-label>
+			<ion-input type="number" [ngClass]="hideConfirmPin ? 'secured' : 'unsecured'" pattern="\d*" name="password" [(ngModel)]="confirmPin" limit-to="4" (ionChange)="onKeyPressed($event,'#btnContinue')" (ionFocus)="clearPin($event)"></ion-input>
+			<button color="dark" ion-button clear item-end (click)='showReenterPin()' class="btnView" id="eyeIcon1">
+				<ion-icon name="eye" style="font-size:26px;"></ion-icon>
+			</button>
+		</ion-item>
+
+
+	</div>
+	<button ion-button id="btnContinue" color="dark" text-center class="btnContinue" (click)="nextStep()">{{'Continue' | translate}}
+		<img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+</ion-content>

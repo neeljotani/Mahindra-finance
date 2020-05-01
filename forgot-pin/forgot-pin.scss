@@ -1,0 +1,74 @@
+page-forgot-pin {
+    ion-header{
+        box-shadow: none;
+        .mahLogo {
+            margin-top: 12px;
+        }
+    }
+    .icon-forgotpin {
+        margin: 42px auto;
+        display: table;
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .forgotpin-container {
+        text-align: center;
+        h6 {
+            font-weight: bold;
+            color: #262626;
+            font-size: 14px;
+            
+            margin-bottom: 0;
+        }
+        span {
+            color: #6c6d70;
+            font-size: 12px;
+            padding-top: 12px;
+            display: block;
+            width: 300px;
+            margin: 0 auto;
+            line-height: 15px;
+            
+        }
+        .mob-no {
+            font-weight: bold;
+            font-size: 18px;
+            color: #262626;
+            padding-top: 22px;
+            padding-bottom: 30px;
+        }
+        .item-inner{
+            border-bottom: none !important;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            ion-label{
+                text-align: center;
+                font-size: 14px;
+                 
+                color: #6c6d70;
+                margin-bottom: 10px;
+            }
+            .input{
+                .text-input{
+                    width: 230px;
+                    margin: auto;
+                    padding: 14px;
+                    text-align: center;
+                    color: #2c2c2c;
+                    font-size: 18px;
+                    font-weight: normal;
+                    border-bottom: 2px solid #b4b4b4;
+                    border-radius: 0;
+                    display: block;
+                }
+            }
+        }
+    }
+    .btnOtp{
+        display: block;
+        margin: 20px auto 0;
+    }
+    
+}

@@ -1,0 +1,318 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{accountData.vehicle_model_name}}</ion-title>
+	</ion-navbar>
+	<ion-segment [(ngModel)]="selectedTabs" color="primary">
+		<ion-segment-button value="accountDetails">
+			{{'Account Details' | translate}}
+		</ion-segment-button>
+		<ion-segment-button value="repaymentDetails">
+			{{'Repayment Details' | translate}}
+		</ion-segment-button>
+	</ion-segment> 
+</ion-header>
+<ion-content>
+	<div [ngSwitch]="selectedTabs">
+		<div *ngSwitchCase="'accountDetails'">
+			<div class="loadnDetailBox">
+				<ion-card>
+					<ion-card-header>
+						<h4>{{accountData.vehicle_model_name}}</h4>
+						<h4>{{accountData.vehicle_registration_no}}</h4>
+					</ion-card-header>
+					<ion-card-content>
+						<ion-grid>
+							<ion-row>
+								<ion-col col-6 class="loadAmtSect">
+									<p>{{'EMI Amount' | translate}}</p>
+									<h3 style="margin-top: 8px !important;">₹ {{accountData.emi_amount}}</h3>
+								</ion-col>
+								<ion-col col-6>
+									<p>{{'Outstanding EMI' | translate}} <br> {{'Amount' | translate}} <img src="assets/imgs/icons/icons-22.png" class="emi-pop" (click)="showCofirm()"></p>
+									<h3>₹ {{accountData.outstanding_amount}}</h3>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<button ion-button color="dark" class="btnPayNow">{{'Pay Now' | translate}}</button>
+					</ion-card-content>
+				</ion-card>
+			</div>
+
+			<div class="accordion">
+				<div class="accordRow">
+					<h3 (click)="toggleGroup(1)">{{'Loan Details' | translate}}
+						<span class="iconArrow" [ngClass]="{'iconArrowAct': index=='1'}"></span>
+					</h3>
+					<div class="accordDetails collapse" [ngClass]="{'expand': index=='1'}">
+						<div class="loanDetailBox">
+							<ion-grid>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Customer Name' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.customer_name}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Registered Mobile Number' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.user_id}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Agreement No' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.account_number}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Loan Amount' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.loan_amount}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Agreement Value' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.loan_amount}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Agreement Date' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.account_date | date : 'dd MMM yyyy'}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Loan Start Date' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.account_date | date : 'dd MMM yyyy'}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Loan End Date' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.loan_end_date | date : 'dd MMM yyyy'}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'EMI Amount' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.emi_amount}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Frequency' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.frequency}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'No. of Instalments' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.no_of_instalments}} months</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Repayment Mode' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.repayment_mode}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Co-applicant Name' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.co_applicant_name}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Guarantor Name' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.guarantor_name}}</div>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</div>
+					</div>
+				</div>
+				<div class="accordRow">
+					<h3 (click)="toggleGroup(2)">{{'Asset Details' | translate}}
+						<span class="iconArrow" [ngClass]="{'iconArrowAct': index=='2'}"></span>
+					</h3>
+					<div class="accordDetails collapse" [ngClass]="{'expand': index=='2'}">
+						<div class="loanDetailBox">
+							<ion-grid>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Vehicle Registration Number' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.vehicle_registration_no}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Vehicle Make Model Variant' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.vehicle_model_name}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Engine Number' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.engine_number}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Chassis Number' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.chassis_number}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Dealer Name' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.dealer_name}}</div>
+									</ion-col>
+								</ion-row>
+
+							</ion-grid>
+						</div>
+					</div>
+				</div>
+				<div class="accordRow">
+					<h3 (click)="toggleGroup(3)">{{'Repayment Schedule' | translate}}
+						<span class="iconArrow" [ngClass]="{'iconArrowAct': index=='3'}"></span>
+					</h3>
+					<div class="accordDetails collapse" [ngClass]="{'expand': index=='3'}">
+						<a class="download-re-sche" (click)="getRepaymentSchedule()">{{'Download Repayment Schedule' | translate}}
+							<img src="assets/imgs/SVG/download0.svg" width="13" height="17"></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div *ngSwitchCase="'repaymentDetails'">
+			<div class="loadnDetailBox1">
+				<ion-card>
+					<ion-card-header>
+						<h4>{{'Next EMI Date' | translate}}</h4>
+						<h4>{{accountData.next_emi_due_Date}}</h4>
+					</ion-card-header>
+					<ion-card-content>
+						<ion-grid>
+							<ion-row>
+								<ion-col col-6 class="loadAmtSect">
+									<p>{{'EMI Amount' | translate}}</p>
+									<h3 style="margin-top: 8px !important;">₹ {{accountData.emi_amount}}</h3>
+								</ion-col>
+								<ion-col col-6>
+									<p>{{'Outstanding EMI' | translate}} <br> {{'Amount' | translate}} <img src="assets/imgs/icons/icons-22.png" class="emi-pop" (click)="showCofirm()"></p>
+									<h3>₹ {{accountData.outstanding_amount}}</h3>
+								</ion-col>
+							</ion-row>
+						</ion-grid>
+						<button ion-button color="dark" class="btnPayNow">{{'Pay Now' | translate}}</button>
+					</ion-card-content>
+				</ion-card>
+			</div>
+
+			<div class="accordion">
+				<div class="accordRow">
+					<h3 (click)="toggleGroup(4)">{{'Repayment Summary Till Date' | translate}}
+						<span class="iconArrow" [ngClass]="{'iconArrowAct': index=='4'}"></span>
+					</h3>
+					<div class="accordDetails collapse" [ngClass]="{'expand': index=='4'}">
+						<div class="loanDetailBox">
+							<ion-grid>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Number of EMIs Due' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.emis_remaining}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Number of EMIs Paid' | translate}}</h5>
+										<div class="loadDetValue">{{accountData.total_emis_Paid}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Total Amount Due' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.total_amount_due}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Total Amount Paid' | translate}} </h5>
+										<div class="loadDetValue">₹ {{accountData.total_amount_paid}}</div>
+									</ion-col>
+								</ion-row>
+								<ion-row>
+									<ion-col col-6>
+										<h5>{{'Outstanding EMI Amount' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.outstanding_amount}}</div>
+									</ion-col>
+									<ion-col col-6>
+										<h5>{{'Future Payable Amount' | translate}}</h5>
+										<div class="loadDetValue">₹ {{accountData.total_amount_due}}</div>
+									</ion-col>
+								</ion-row>
+							</ion-grid>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="reminder-box">
+				<h4 class="reminder-click" (click)="hideReminderBox()">{{'Set Repayment Reminder' | translate}}
+					<img src="assets/imgs/SVG/notification0.svg" width="15" height="19">
+				</h4>
+				<div class="reminder-content" [ngClass]="isReminderBox ? 'show-reminderBox':'hide-reminderBox'">
+					<p *ngIf="!showScheduleOptions">{{'A reminder has been set for this account.' | translate}}<br>
+						{{'Do you want to delete the reminder?' | translate}}</p>
+					
+					<div style="display:flex;padding-top: 10px">
+						<button *ngIf="!showScheduleOptions" ion-button color="dark" class="btnOk" (click)="deleteNotifications()">{{'Yes' | translate}}</button>			
+						<button *ngIf="!showScheduleOptions" ion-button color="dark" class="btnOk" (click)="closeReminderBox()">{{'No' | translate}}</button>					
+					</div>
+					<p *ngIf="showScheduleOptions">{{'How many days before your due date would you' | translate}} <br>
+						{{'like to set a repayment reminder?' | translate}}</p>
+
+					<ion-list *ngIf="showScheduleOptions" radio-group [(ngModel)]="selectedDay">
+						<div class="reminder-date flex-wrap">
+							<div class="details" [ngClass]="selectedDay == '2' ? 'active': ''">
+								<h3>2</h3>
+								<span>{{'DAYS' | translate}}</span>
+								<ion-radio value="2"></ion-radio>
+							</div>
+							<div class="details" [ngClass]="selectedDay == '5' ? 'active': ''">
+								<h3>5</h3>
+								<span>{{'DAYS' | translate}}</span>
+								<ion-radio value="5"></ion-radio>
+							</div>
+							<div class="details" [ngClass]="selectedDay == '10' ? 'active': ''">
+								<h3>10</h3>
+								<span>{{'DAYS' | translate}}</span>
+								<ion-radio value="10"></ion-radio>
+							</div>
+						</div>
+					</ion-list>
+					<button  *ngIf="showScheduleOptions" ion-button color="dark" class="btnOk" (click)="setReminder()">{{'Ok' | translate}}</button>
+
+				</div>
+			</div>
+
+			<div class="pay-card-box">
+				<h4>{{'Last 5 Payment Details' | translate}}</h4>
+				<div class="payment-details">
+					<ion-grid>
+						<ion-row *ngFor="let transaction of lastTransactionDetails">
+							<ion-col col-3>
+								<div class="date">
+									<h2>{{transaction.Received_Date | date : 'dd'}}</h2>
+									<h5>{{transaction.Received_Date | date : 'MMM'}}</h5>
+									<p>{{transaction.Received_Date | date : 'yyyy'}}</p>
+								</div>
+							</ion-col>
+							<ion-col col-3 class="amount">
+								<div class="details">
+									<h5>{{'Receipt No' | translate}}</h5>
+									<p>{{transaction.Receipt_Number}}</p>
+								</div>
+								<div class="details">
+									<h5>{{'Amount' | translate}}</h5>
+									<p>₹ {{transaction.Received_Payment}}</p>
+								</div>
+							</ion-col>
+							<ion-col col-6 class="mode">
+								<h5>{{'Mode of Payment' | translate}}</h5>
+								<p>{{transaction.Receipt_Type}}</p>
+							</ion-col>
+						</ion-row>
+						<ion-row *ngIf="!lastTransactionDetails || lastTransactionDetails.length == 0">
+							<ion-col col-12>
+								<p style="text-align: center;">{{'No last transactions found' | translate}}</p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>

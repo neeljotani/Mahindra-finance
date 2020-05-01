@@ -1,0 +1,134 @@
+page-language-screen {
+    ion-header{
+        box-shadow: none;
+        background: transparent;
+    }
+    .choose-lang-select{
+        text-align: center;
+        margin-top: 20px;
+        h5 {
+            color: #262626;
+            /* font-family: 'NirmalaUI'; */
+            font-size: 18px;
+            padding-bottom: 5px;
+            margin-bottom: 0px;
+        }
+        h4 {
+            color: #262626;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding-bottom: 0px;
+            text-transform: capitalize;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #6c6d70;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            margin: 0 0 0 0;
+        }
+    }
+    .a-suggestion {
+        margin: 60px auto;
+        display: table;
+    }
+    .selected-lang {
+        color: #6c6d70;
+        margin-bottom: 50px;
+        max-width: 185px;
+        margin: 0 auto;
+        text-transform: capitalize;
+        .list{
+            .item-block{
+                border-top: none !important;
+                text-align: center;
+                padding-left: 0px;
+                .item-inner{
+                    padding-right: 0px;
+                    .input-wrapper{
+                        display: inline-block;
+                        margin: 0 0 0 auto;
+                        text-align: right;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        letter-spacing: 0.5px;
+                        
+                    }
+                    .radio{
+                        margin: 0 25px 0 0;
+                        .radio-icon{
+                            border: none;
+                            border-radius: 0;
+                            .radio-inner{
+                                background-color: transparent;
+                            }
+                            &.radio-checked{
+                                .radio-inner{
+                                    border-color: transparent;
+                                    background: url(../assets/imgs/icons/icons-1.png) no-repeat 0 0 transparent;
+                                    width: 20px;
+                                    height: 9px;
+                                    transform: rotate(0deg);
+                                    top: 7px;
+                                }
+                                .radio-md{
+                                    .radio-inner{
+                                        top: 5px;
+                                    }
+                                } 
+                            }
+                            
+                            
+                        }
+                        
+                    }
+                }
+            }
+            .langHindi{
+                border-bottom: none !important;
+            }
+            .langEngl{
+                .radio{
+                    margin-right: 35px !important;
+                }
+            }
+        }
+       /*  h4 {
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            padding-left: 20px;
+        }
+        .list-lang {
+            width: 200px;
+            margin: auto;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #efefef;
+            display: flex;
+            justify-content: center;
+            padding-right: 0px;
+            padding-left: 18px;
+            .hindi-box{
+                margin: 0px;
+                padding: 0px;
+                li {
+                    float: left;
+                    border-right: 1px solid #6c6d70;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    list-style: none;
+                }
+            }
+        } */
+    }
+    .button{
+        display: block;
+        margin: 25px auto;
+    }
+}

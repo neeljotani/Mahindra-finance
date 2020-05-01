@@ -1,0 +1,35 @@
+<ion-header  class="main-header">
+  <ion-navbar hideBackButton="true">
+      <div class="mahLogo" text-center>
+        <img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo1" alt="mahindra">
+      </div>
+  </ion-navbar>  
+</ion-header>
+
+
+<ion-content padding>
+    <h4>{{'Log In' | translate}} </h4>
+    <ion-item class="regMobileBox">
+        <ion-label stacked>{{'Enter registered mobile number' | translate}}</ion-label>
+        <ion-input type="number" [(ngModel)]="mobileNo" pattern="\d*" name="password" limit-to="10"></ion-input>        
+    </ion-item>
+    <ion-item class="enterPinBox">
+        <ion-label stacked>{{'Enter App PIN' | translate}}</ion-label>
+        <ion-input type="number" class="secured" [(ngModel)]="pin" pattern="\d*" name="password" limit-to="4" (ionChange)="onPinChange($event)" (ionFocus)="clearPassword($event)"></ion-input>        
+    </ion-item>
+    <button ion-button color="dark" text-center class="btnLogin" (click)="login()" id="btnLogin" >{{'Login' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+    <button ion-button color="primary" clear class="btnFrgtPin" (click)="forgtPinPage()">{{'Forgot App PIN' | translate}}?</button>
+    <button ion-button color="primary" clear class="btnUsername">{{'Login using username' | translate}}</button>
+    
+    <ul class="quickLinks">
+        <li><a>
+            <div class="linkIcon iconQuickPay"></div>
+            {{'Quick Pay' | translate}}</a></li>
+        <li><a>
+            <div class="linkIcon iconQBranches" (click)="goToBranch()"></div>
+            {{'Branches' | translate}}</a></li>
+        <li><a>
+            <div class="linkIcon iconApplyNow"></div>
+            {{'Apply Now' | translate}}</a></li>
+    </ul>
+</ion-content>

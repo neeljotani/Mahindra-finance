@@ -1,0 +1,34 @@
+page-fixed-deposit {
+    .loanDetailBox{
+        h3{
+            font-size: 15px;
+            margin-top: 15px;
+            text-transform: capitalize;
+        }
+        .grid{
+            padding: 0px;
+            .row{
+                margin: 12px 0;
+                .col{
+                    padding: 0px;
+                    h5 {
+                        color: #6d6e71;
+                        font-size: 11px;
+                        opacity: 0.7;
+                        padding-bottom: 5px;
+                        margin: 0px;
+                        text-transform: capitalize;
+                        font-weight: normal;
+                    }
+                    .loadDetValue {
+                        color: #484848;
+                        font-size: 14px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}

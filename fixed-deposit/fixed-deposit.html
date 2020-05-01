@@ -1,0 +1,46 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>{{'fixed Deposit' | translate}}</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="loanDetailBox">
+		<h3>{{'Fixed Deposite Details' | translate}}</h3>
+		<ion-grid>
+			<ion-row>
+				<ion-col col-6>
+					<h5>{{'Account Number' | translate}}</h5>
+					<div class="loadDetValue">{{accountData.account_number}}</div>
+				</ion-col>
+				<ion-col col-6>
+					<h5>{{'Start Date' | translate}}</h5>
+					<div class="loadDetValue">{{accountData.start_date | date : 'dd MMM yyyy'}}</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-6>
+					<h5>{{'Duration' | translate}}</h5>
+					<div class="loadDetValue">{{accountData.duration}} {{'Months' | translate}}</div>
+				</ion-col>
+				<ion-col col-6>
+					<h5>{{'Investment Amount' | translate}} </h5>
+					<div class="loadDetValue">₹ {{accountData.investment_amount}}</div>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-6>
+					<h5>{{'Maturity Amount' | translate}}</h5>
+					<div class="loadDetValue">₹ {{accountData.maturity_amount}}</div>
+				</ion-col>
+				<ion-col col-6>
+					<h5>{{'ROI' | translate}}</h5>
+					<div class="loadDetValue">{{accountData.roi}}</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+</ion-content>

@@ -1,0 +1,52 @@
+<!--
+  Generated template for the ForgotPinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+  <ion-navbar>
+      <div class="mahLogo">
+        <img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo2" alt="mahindra">
+      </div>
+  </ion-navbar>  
+</ion-header> -->
+
+<!-- <ion-header>
+
+	<ion-navbar>
+      <div class="mahLogo">
+          <img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo2" alt="mahindra">
+        </div>
+	  <ion-title>{{'Forgot App PIN' | translate}}</ion-title>
+	</ion-navbar>
+  
+  </ion-header> -->
+  <ion-header  class="main-header">
+      <ion-navbar>
+          <div class="mahLogo" text-center>
+            <img src="assets/imgs/SVG/Mahindra_Finance_Final_logo.svg" class="img-responsive MFlogo1" alt="mahindra">
+          </div>
+          
+      </ion-navbar>  
+    </ion-header>
+
+<ion-content padding>
+    <ion-navbar>
+    <ion-title>{{'Forgot App PIN' | translate}}</ion-title>
+  </ion-navbar>
+  <div class="icon-forgotpin">
+      <img src="assets/imgs/SVG/forgot password0.svg" width="120" height="85" alt="forgot-pin" class="img-responsive">
+  </div>
+  <div class="forgotpin-container">
+    <h6>{{'Forgot Your Pin?' | translate }}</h6>
+    <span>{{' To reset App PIN, we will send OTP' | translate }} <br />{{ 'on the below mentioned mobile number' | translate }}</span>  
+    
+    <!-- <h2 class="mob-no">XXXXXX4510</h2> -->    
+    <ion-item>     
+        <ion-label stacked>{{ 'Enter Register Mobile Number' | translate }}</ion-label>   
+        <ion-input type="number" [(ngModel)]="mobileNo" pattern="\d*" maxLength="10" limit-to="10" placeholder="Eg. 9876543210 "></ion-input>
+    </ion-item>
+  </div>
+  <button ion-button color="dark" text-center class="btnOtp" (click)="otpVerifPage()">{{'Get Otp' | translate }} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+</ion-content>

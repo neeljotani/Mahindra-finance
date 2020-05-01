@@ -1,0 +1,75 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>{{'offer Details' | translate}}</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<h3>{{'Pre-approved Loan' | translate}}</h3>
+	<p>{{'Drag or tap to select loan amount to see your EMI' | translate}} </p>
+	<ion-card class="cashPointCard">
+
+		<ion-card-header>
+			<ion-grid>
+				<ion-row>
+					<ion-col col-6>
+						<h6>{{'Loan Amount' | translate}}</h6>
+					</ion-col>
+					<ion-col col-6 text-right>
+						<div class="rsValue">₹ <span>{{selectedLoanAmount}}</span></div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-grid>
+				<ion-row style="border-top:none">
+					<ion-col col-12>
+						<ion-item>
+							<ion-range (ionChange)="checkValue()" [min]="min" [max]="max" [step]="step" snaps="true" color="secondary" [(ngModel)]="selectedLoanAmount"></ion-range>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h4>{{'Tenure' | translate}}</h4>
+					</ion-col>
+					<ion-col col-6>
+						<h5>{{filterDetails.Tenure}} {{'Months' | translate}}</h5>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h4>{{'Interest Rate' | translate}}</h4>
+					</ion-col>
+					<ion-col col-6>
+						<h5>{{filterDetails.Y_Int_Rate}}%</h5>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-6>
+						<h4>{{'EMI Amount' | translate}}</h4>
+					</ion-col>
+					<ion-col col-6>
+						<h5>₹ {{filterDetails.Payment_Amt1}} / {{'Month onwards' | translate}}</h5>
+					</ion-col>
+				</ion-row>
+
+			</ion-grid>
+		</ion-card-content>
+
+	</ion-card>
+	<div class="notes">
+		<p>{{'I allow Mahindra Finance representatives to call/SMS' | translate}} <br> {{'me, overriding my registration for DNC/NDNC' | translate}}.<br>
+			<a (click)="goToTerms()">{{'Terms' | translate}} &amp; {{'Conditions' | translate}}</a> {{'apply' | translate}}.
+		</p>
+		<button ion-button color="dark" class="btnApply" (click)="applyNow()">{{'Apply Now' | translate}} <img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11"
+			 height="9"></button>
+
+	</div>
+</ion-content>

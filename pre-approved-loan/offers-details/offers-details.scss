@@ -1,0 +1,128 @@
+page-offers-details {
+    h3 {
+        text-align: center;
+        color: #323232;
+        font-size: 14px;    
+        text-align: center;
+        margin: 10px 0 5px !important;
+    }
+    p {
+        text-align: center;
+        color: #898989;
+        font-size: 11px;
+        margin: 0px;
+    }
+    .range-md,
+    .range-ios {
+        padding: 8px 0px 20px;
+        padding-right: 10px;
+    }
+    .range-md .range-bar,
+    .range-ios .range-bar {        
+        border-radius: 8px;       
+        height: 4px;
+        background: #d3d2d2 repeat-x !important;
+    }
+    .range-md .range-tick,
+    .range-ios .range-tick{
+        top: 35px;
+        height: 5px;
+        width: 1px;
+        background: #e1e4e9 !important;
+    }
+    .range-md .range-knob-handle,
+    .range-ios .range-knob-handle{
+        margin-left: -26px !important;
+    }
+    .progRaange-value{
+        position: absolute;
+        top: 12px;
+        left: -3px;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 9px;
+        line-height: 9px;
+        color: #999;
+    }
+    .range-knob{
+        background: #6d6e71 !important;
+        width: 30px !important;
+        height: 30px !important;
+        top: 7px !important;
+    }
+    .range-ios .range-knob {
+        left: 7px;
+        top: 12px !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .cashPointCard{
+        margin: 25px 0px 10px !important;
+        width: calc(100%) !important;
+        box-shadow: none !important;
+        border: 1px solid #e9e8e8 !important;
+        padding: 15px;
+        border-radius: 5px !important;
+        ion-card-header{
+            padding: 0px;
+            color: #898989;
+            font-weight: bold;
+            font-size: 14px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f1f0f0;
+            .grid{
+                padding: 0px;
+                .col{
+                    padding: 0px;
+                }
+            }
+        }
+        ion-card-content{
+            padding: 0px !important;
+            .grid{
+                padding: 0px;
+                .row{
+                    border-bottom: 1px solid #f1f0f0;
+                    .col{
+                        padding: 12px 0px;
+                        
+                        h4 {
+                            color: #898989;
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                            font-weight: normal;
+                        }
+                        h5 {
+                            color: #898989;
+                            font-size: 12px;
+                            
+                            font-weight: normal;
+                            margin: 0px;
+                            text-align: right;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                        .col{
+                            padding-bottom: 0px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .notes{
+        margin-top: 50px;
+        p {
+            font-size: 12px;
+            text-align: center;
+            color: #6c6d70;
+            padding: 0 2px;
+            line-height: 17px;
+        }
+        .btnApply{
+            margin-top: 16px;
+        }
+    }
+}

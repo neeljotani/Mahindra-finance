@@ -1,0 +1,82 @@
+<!--
+  Generated template for the ContactUsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{'Contact Us' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="excutiveDetList">
+    <ion-card>      
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="excNameRow">
+            <ion-col col-2 text-center>
+                <img src="assets/imgs/othericons/contIcon-mess.png" style="width:25px;" />
+            </ion-col>
+            <ion-col col-10>
+              <div class="rowTitle">{{'Email Id' | translate}}</div>
+              <div>Share.mmfsl@mahidra.com</div>   
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>      
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="excNameRow">
+            <ion-col col-2 text-center>
+                <img src="assets/imgs/othericons/contIcon-call.png" style="width:25px;" />
+            </ion-col>
+            <ion-col col-7>
+              <div class="rowTitle">{{'Call' | translate}}</div>
+              <div>+92-22-6652-6000</div>   
+            </ion-col>
+            <ion-col col-3>
+              <button ion-button color="dark" class="btnCall">
+                <a href="tel:+92-22-6652-6000"><font color="white"><ion-icon name="call"></ion-icon>{{'Call' | translate}}</font></a>
+                 
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>      
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="excNameRow">
+            <ion-col col-2 text-center>
+                <img src="assets/imgs/othericons/contIcon-locate.png" style="width:25px;" />
+            </ion-col>
+            <ion-col col-10>
+              <div class="rowTitle">{{'Our Corporate Office' | translate}}</div>
+              <div>{{'4th Floor, Mahindra Towers,' | translate}}<br />
+              {{'Dr.G.M.Bhosale Marg,' | translate}} <br />
+              {{'P.K. Kurne Chowk, Worli,' | translate}} <br />
+              {{'Mumbai-400 018' | translate}}</div>   
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12 text-left>
+              <button ion-button color="dark" (click)="goToBranchLocator()" class="btnLocate">
+                <img src="assets/imgs/othericons/contIcon-locateUs.png" style="" />
+             
+                {{'Locate' | translate}}
+             </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

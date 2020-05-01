@@ -1,0 +1,217 @@
+page-repayment-details {
+    .loadnDetailBox{
+        ion-card{
+            margin: 0 15px 10px !important;
+            width: calc(100% - 30px) !important;
+            box-shadow: none !important;
+            border: 1px solid #e9e8e8;
+            padding: 20px;
+            border-radius: 5px !important;
+            ion-card-header{
+                padding: 0 0 10px !important;
+                border-bottom: 1px solid #f1f0f0;
+                justify-content: space-between;
+                font-size: 12px;
+                color: #898989;
+                font-weight: bold;
+                text-transform: capitalize;
+                display: flex;
+                h4{
+                    font-size: 12px;
+                    color: #898989;
+                    font-weight: bold;
+                }            
+                
+            }
+            ion-card-content{
+                padding: 10px 0 0 0 !important;
+                .grid{
+                    padding: 0px !important;
+                    .col{
+                        padding: 0px !important;
+                        &.loadAmtSect{
+                            border-right: 1px solid #f2f1f1;
+                        }
+                    }
+                     p {
+                        color: #484848;
+                        font-size: 12px;
+                        opacity: 0.7;
+                        padding-bottom: 8px;
+                        text-align: center;
+                        text-transform: capitalize;
+                        min-height: 40px;
+                        position: relative;
+                    }
+                    h3 {
+                        color: #484848;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    .emi-pop {
+                        position: relative;
+                        right: -4px;
+                        top: 2px;
+                        width: 16px;
+                        display: -webkit-inline-box;
+                    }
+                }
+            }
+            .btnPayNow{
+                margin-top: 20px;
+                min-width: 135px !important;
+                .button-inner{
+                    font-size: 12px;
+                }
+            }
+            
+        }
+    }
+
+    .accordion{
+        padding: 15px 15px 0;
+    }
+
+    .reminder-box {
+        border: 1px solid #ededed;
+        border-radius: 3px;
+        margin: 15px;
+        padding: 7px 15px;
+        h4 {
+            color: #6d6e71;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin: 0px;
+            text-transform: capitalize;
+        }
+        
+        /* .hide-calendar{
+            border: 1px solid green;
+        } */
+        .reminder-content {
+            padding: 20px 0px 10px 0px;
+            display: none;
+            transition: all 0.2s ease;
+            &.show-reminderBox{
+                display: block !important;
+            }
+            p{
+                margin: 0px;
+                color: #6d6e71;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            .reminder-date {
+                justify-content: space-between;
+                display: flex;
+                .details {
+                    width: 70px;
+                    height: 70px;
+                    border: 1px solid #cbcbcb;
+                    border-radius: 50%;
+                    margin: 15px 0;
+                    padding: 13px;
+                    cursor: pointer;
+                    color: #6d6e71;
+                    &.active {
+                        border: 1px solid #000;
+                        color: #000;
+                    }
+                    h3{
+                        font-size: 21px;
+                        text-align: center;
+                        font-weight: bold;
+                        margin: 0px;
+                    }
+                    span {
+                        font-size: 10px;
+                        text-align: center;
+                        display: block;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .btnOk{
+                min-width: 120px;
+            }
+        }
+    }
+
+    .pay-card-box{        
+        padding: 0 15px 15px;
+        h4 {
+            color: #6d6e71;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10px;
+            padding-bottom: 0px;
+            text-transform: capitalize;
+            margin: 0px;
+        }
+        .payment-details {
+            border-bottom: 1px solid #ececec;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            .grid{
+                padding: 0px;
+                .row{
+                    border-bottom: 1px solid #ececec;
+                    padding: 5px 0;
+                    &:last-child{
+                        border-bottom:none;
+                    }
+                }
+            }
+            .date{
+                padding: 10px;
+                border: 1px solid #efefef;
+                text-align: center;
+                border-radius: 5px;
+                width: 65px;
+                h2, h5, p{
+                    margin: 0px;
+                }
+            }
+            .amount{
+                .details:first-child{
+                    margin-bottom: 8px;
+                }
+                h5{
+                    color: #6d6e71;
+                    opacity: 0.7;
+                    font-size: 12px;
+                    padding-bottom: 3px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                }
+                p{
+                    color: #6d6e71;
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+            .mode{
+                h5{
+                    color: #6d6e71;
+                    opacity: 0.7;
+                    font-size: 12px;
+                    padding-bottom: 3px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                }
+                p{
+                    color: #6d6e71;
+                    font-size: 14px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}

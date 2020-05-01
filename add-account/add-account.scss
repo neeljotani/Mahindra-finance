@@ -1,0 +1,50 @@
+page-add-account {
+    swiper{
+        
+        .swiper-slide{
+            border: 1px solid #e7e7e7;
+            width: 90px;
+            height: 120px;
+            border-radius: 5px;
+            padding: 20px 10px;
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            .planIcon{
+                width: 68px;
+                height: 32px;
+                margin: 0 auto;
+            }
+            p {
+                text-align: center;
+                color: #6d6e71;
+                font-size: 12px;
+                padding-top: 20px;
+                text-transform: capitalize;
+                margin: 0px;
+            }
+            &:nth-child(1) {
+                margin-left: 15px;
+            }
+            &:last-child {
+                margin-right: 15px;
+            }
+        }
+        .swiper-button-prev{
+            width: 24px;
+            height: 52px;
+            background: url(../assets/imgs/SVG/forward-bg.svg) no-repeat;
+            position: absolute;
+            left: 0px;
+            bottom: 38px;
+        }
+        .swiper-button-next{
+            background: rgba(0, 0, 0, 0) url(../assets/imgs/SVG/Back-bg.svg) no-repeat;
+            bottom: 38px;
+            width: 24px;
+            height: 52px;
+            position: absolute;
+            right: 0px;
+        }
+    }
+}

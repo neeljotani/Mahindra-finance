@@ -1,0 +1,135 @@
+<!--
+  Generated template for the PayOnlinePaymentModePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-navbar>
+        <ion-title>Pay Online</ion-title>
+      </ion-navbar>
+    </ion-navbar>
+   
+  
+  </ion-header>
+
+
+  <ion-content>
+      <h4>How to Pay</h4>
+      <ul class="breadcrumb-howtopay">
+        <li class="active">
+            <img src="assets/imgs/SVG/select_amount_light0.svg" 
+            width="26" height="26">
+            <p>Select <br /> Amount</p>
+        </li>
+        <li class="">
+            <img src="assets/imgs/SVG/confirm_details_light0.svg" width="25" height="25">
+            <p>Confirm <br /> Details</p>
+        </li>
+        <li class="">
+            <img src="assets/imgs/SVG/choose_payment_mode_dark0.svg" width="25" height="25">
+            <p>Choose <br /> Payment Mode</p>
+        </li>
+            
+        </ul>
+
+        <div class="payonline-paymentmode">
+            <h3>Payment Details</h3>
+            <div class="paymentdetail-box">
+                <ion-grid>
+                    <ion-row>
+                      <ion-col col-8>Pay Amount</ion-col>
+                      <ion-col col-4 text-right>₹ 2,300</ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-8>For Loan Account Number</ion-col>
+                        <ion-col col-4 text-right>2156982858522</ion-col>
+                    </ion-row>
+                  </ion-grid>
+                
+                
+            </div>
+
+            <div class="paymentOption-box">
+              
+                <ion-list radio-group>
+                    <ion-list-header>
+                        Choose Payment Mode
+                    </ion-list-header>
+
+                    <ion-grid>
+                        <ion-row>
+                          <ion-col col-8>
+                              <ion-item>
+                                  <ion-label>Net Banking</ion-label>
+                                  <ion-radio checked="true" value="net-banking" item-left></ion-radio>
+                                  
+                                </ion-item>
+                          </ion-col>
+                          <ion-col col-4 text-right><ion-icon name="heart"></ion-icon></ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-8>
+                                <ion-item>
+                                    <ion-label>Debit Card</ion-label>
+                                    <ion-radio value="debit-card" item-left></ion-radio>
+                                  </ion-item>
+                            </ion-col>
+                            <ion-col col-4 text-right>
+                              <ion-icon name="heart"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-8>
+                                <ion-item>
+                                    <ion-label>ATM PIN</ion-label>
+                                    <ion-radio value="atm-pin" item-left></ion-radio>
+                                  </ion-item>
+                            </ion-col>
+                            <ion-col col-4 text-right>
+                              <ion-icon name="heart"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-8>
+                                <ion-item>
+                                    <ion-label>Wallet</ion-label>
+                                    <ion-radio value="wallet" item-left></ion-radio>
+                                  </ion-item>
+                            </ion-col>
+                            <ion-col col-4 text-right>
+                              <ion-icon name="heart"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    
+                  </ion-list>
+            </div>
+
+            <button ion-button color="dark" class="btnConfirm">Confirm & Pay<img src="assets/imgs/SVG/next_btn_arrow0.svg" width="11" height="9"></button>
+
+
+            <div class="bottommode-securelisting">
+                <p>Secure 128-bit ssl encrypted payment</p>
+                <ul class="securelogo-section">
+                    <li>
+                    <img src="assets/imgs/othericons/mode-card1.jpg" alt="">
+                    </li>
+                    <li>
+                    <img src="assets/imgs/othericons/mode-card2.jpg" alt="">
+                    </li>
+                    <li>
+                    <img src="assets/imgs/othericons/mode-card3.jpg" alt="">
+                    </li>
+                    <li>
+                    <img src="assets/imgs/othericons/mode-card4.jpg" alt="">
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+
+</ion-content>

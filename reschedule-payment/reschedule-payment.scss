@@ -1,0 +1,61 @@
+page-reschedule-payment {
+    ion-header{
+        box-shadow: none;
+        background: transparent;
+    }
+    h3{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 25px !important;
+    }
+    .otp-input-box{
+        max-width: 195px;
+        margin: 25px auto 5px;
+        .item{
+            padding-left: 0px;
+            .item-inner{
+                padding-right: 0px;
+                /* border-bottom: none !important;
+                background: url(../assets/imgs/otp-line.png) no-repeat 0 100%; */
+                
+                .input-wrapper{
+                    .label{
+                        margin-right: 0px;
+                        text-transform: capitalize;
+                        color: #6c6d70;
+                        font-size: 14px;
+                        padding-bottom: 10px;
+                        text-align: center;
+                    }
+                    .input{
+                        margin-right: 0px;
+                        outline: none;
+                        
+                        padding: 0 0 0 0px;
+                       
+                        .text-input{
+                            padding: 14px 0px 5px 0px;
+                            max-width: 265px;
+                            margin: 0 auto;
+                            display: block;
+                            /* letter-spacing: 35px; */
+                            color: #6c6d70;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .btnContinue{
+        display: block;
+        margin: 55px auto 0;
+    }
+    .btnView{
+        height: 25px !important;
+        font-size: 23px;
+        min-width: 25px;
+        padding: 0px !important;
+        margin: 52px 0 0 0px !important;
+    }
+}

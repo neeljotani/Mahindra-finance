@@ -1,0 +1,55 @@
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>{{'Pre-Approved Loan Offers' | translate}}</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div class="preApprovList">
+		<ul>
+			<li>
+				<img src="assets/imgs/SVG/minimum documentation0.svg" width="17" height="21" alt="">
+				<p>{{'Minimum' | translate}} <br>{{'Documentation' | translate}}</p>
+			</li>
+			<li>
+				<img src="assets/imgs/SVG/Faster Disbursement0.svg" alt="" width="25" height="22">
+				<p>{{'Faster' | translate}} <br> {{'Disbursement' | translate}}</p>
+			</li>
+			<li>
+				<img src="assets/imgs/SVG/attractive intrest rates0.svg" alt="" width="20" height="20">
+				<p>{{'Attractive' | translate}} <br> {{'Interest Rate' | translate}}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="preapprove-individualList">
+		<div class="preapprove-individualbox">
+			<ion-grid *ngIf="!noOffers">
+				<ion-row>
+					<ion-col col-8 class="preApprovTitle">{{'Suvidha Loans' | translate}}<br><span>Special loans for your special needs</span></ion-col>
+					<ion-col col-4 class="preApprovValue">{{preApprovedLoanDetails[0].Y_Int_Rate}} <small>%</small> <span> {{'Interest Rate' | translate}}</span></ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12>
+						<button ion-button color="dark" class="btnView" (click)="gotopage()">{{'View Details' | translate}}</button>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 class="preApprovTitle">
+						<span>Attributes/USPs</span><br>
+						<span style="color : #898989;font-weight: bold;">Pre- Approved Quick Disbursement Convenient</span>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+			<ion-grid>
+				<ion-row>
+					<ion-col *ngIf="noOffers">
+						<p class="centerText">{{'Currently no offers are available for you' | translate}}</p>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+	</div>
+</ion-content>

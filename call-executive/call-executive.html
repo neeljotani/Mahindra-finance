@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>{{'call Executive' | translate}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="excutiveDetList" *ngIf="showDetails">
+		<ion-card *ngFor="let executive of executiveDetails">
+			<ion-card-content>
+				<ion-grid>
+					<ion-row class="excNameRow">
+						<ion-col col-7>{{executive.vehicle_model_name}}</ion-col>
+						<ion-col col-5 text-right>{{executive.vehicle_registration_no}} </ion-col>
+					</ion-row>
+					<ion-row>
+						<ion-col col-8>
+							<ion-row>
+								<ion-col col-3 text-left><img src="assets/imgs/SVG/user card0.svg" width="32" height="32" alt="user icon" class="exective-usericon"></ion-col>
+								<ion-col col-9>
+									<h3>{{executive.executive_name}}</h3>
+									<p>{{executive.executive_contact_number}}</p>
+									<div class="loca">{{executive.branch_name}}</div>
+								</ion-col>
+							</ion-row>
+						</ion-col>
+						<ion-col col-4 text-right>
+							<button ion-button color="dark" class="btnCall">
+								<a href="tel:{{executive.executive_contact_number}}"><ion-icon name="call"></ion-icon> {{'Call' | translate}}
+								</a>
+							</button>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</ion-card-content>
+		</ion-card>
+	</div>
+	<div class="excutiveDetList" *ngIf="!showDetails">
+		<p style="text-align: center">{{'No executive details available' | translate}}</p>
+	</div>
+</ion-content>

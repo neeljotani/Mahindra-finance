@@ -1,0 +1,40 @@
+page-dashboard-tab {
+    ion-header{
+        margin-bottom: 0px !important;
+        box-shadow: none;
+        .toolbar{
+            padding: 15px;
+            .mahLogo{
+                float: left;
+            }
+        }
+    }
+    .kababMenu{
+        padding-bottom: 10px !important;
+    }
+    .relatviePosition{
+        position: relative !important;
+    }
+    .absolutePosition{
+        position: absolute !important;
+    }
+    .alert-box{
+        background: #343434;
+        margin-bottom: 10px;
+        padding: 5px 15px;
+        text-transform: capitalize;
+    }
+        
+    .alert-box h4 {
+        color: #fff;
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+    
+    .alert-box p {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        color: #898989;
+        font-size: 11px;
+    }
+}

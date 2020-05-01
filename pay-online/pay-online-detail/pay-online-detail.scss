@@ -1,0 +1,179 @@
+page-pay-online-detail {
+    letter-spacing: 0.5px;
+    h4 {
+        color: #6d6e71;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .breadcrumb-howtopay {
+        padding: 10px 0 20px;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        li {
+            width: 32%;
+            position: relative;
+            list-style: none;
+            text-align: center;
+            padding: 7px 0 0;
+            p {
+                color: #6d6e71;
+                font-size: 11px;
+                padding-top: 7px;
+                opacity: 0.7;
+                text-transform: capitalize;
+                margin: 0px;
+            }
+            &.active{
+                p {
+                    color: #323232;
+                    font-size: 11px;
+                    margin: 0px;
+                    opacity: 1;
+                }
+            }
+            &::before {
+                background: #dcdbdb;
+                content: "";
+                position: absolute;
+                top: 19px;
+                display: inline-block;
+                z-index: -1;
+                height: 2px;
+                width: 100%;
+            }
+            &:nth-child(1)::before {
+                width: 64%;
+            }
+            &:nth-child(2)::before {
+                height: 2px;
+                width: 100%;
+                left: 0px;
+            }
+            &:nth-child(3)::before {
+                left: 0;
+                width: 50%;
+            } 
+        }
+    }
+
+    .payonlien-btmwrapper {
+        padding: 20px 15px 0;
+        text-transform:capitalize;
+        h5 {
+            color: #323232;
+            font-size: 12px;
+            margin-bottom: 0;
+            margin-bottom: 0px;
+            text-transform:capitalize;
+            font-weight: normal;
+            margin: 0px;
+        }
+        h6 {
+            color: #323232;
+            font-size: 11px;
+            margin: 0px;
+            font-weight: normal;
+        }
+        .selectDropdown{
+            margin: 0px !important;
+            .item-block{
+                padding-left: 0px !important;
+                border-top: none !important;
+                min-height: 2.4rem;
+                margin-top: 10px !important;
+                border-bottom: 1px solid #ccc;
+                .item-inner{
+                    padding-right: 0px;
+                    ion-select{
+                        padding: 0px;
+                        width: 100%;
+                        max-width: 100%;
+                        font-size: 12px;
+                        color: #6c6d70;
+                        .select-placeholder{
+                            font-size: 12px;
+                            color: #6c6d70;
+                            text-transform: none;
+                        }
+                        .select-icon{
+                            margin-right: 5px;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+
+        .amountWayBox{
+            margin-top: 20px;
+            .list-header{
+                padding-left: 0px;
+                border-top: none;
+                margin-bottom: 0px;
+                border-bottom: none;
+                color: #6d6e71;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: capitalize;
+                .label{
+                    margin: 0px;
+                }
+            }
+            .item-block{
+                padding-left: 0px;
+                margin-bottom: 15px;
+                .radio{
+                    margin: -25px 15px 0 0;
+                    .radio-icon{
+                        border: 1px solid #d1d1d1;
+                        width: 19px;
+                        height: 19px;
+                        border-radius: 50%;
+                        &.radio-checked{
+                            border: 1px solid #d1d1d1;
+                            .radio-inner{
+                                background: #6d6e71;
+                                border-radius: 50%;
+                            }
+                        }
+                        .radio-inner{
+                            width: 11px;
+                            height: 11px;
+                            top: 3px;
+                            left: 3px;
+                        }
+                    }
+                }
+                .item-inner{
+                    .input-wrapper{
+                        display: block;
+                        .label{
+                            margin: 3px 0 0 0;
+                            color: #323232;
+                            font-size: 12px;
+                            text-transform: capitalize;
+                        }
+                        .text-input{
+                            margin: 7px 0 0;
+                            color: #323232;
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .btnContue{
+        display: block;
+        margin: 0 auto;
+    }
+}

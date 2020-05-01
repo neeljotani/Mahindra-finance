@@ -1,0 +1,172 @@
+<ion-content>
+  <div class="loadnDetailBox">
+    <ion-card>
+      <ion-card-header>
+        <h4>Mahindra Bolero LS</h4>
+        <h4>MH 01 RB 2103</h4>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid>        
+          <ion-row>
+            <ion-col col-6 class="loadAmtSect">
+              <p>EMI Amount</p>
+              <h3>₹ 2,300</h3>
+            </ion-col>
+            <ion-col col-6>
+              <p>Outstanding EMI <br> Amount <img src="assets/imgs/icons/icons-22.png" class="emi-pop" (click)="showCofirm()"></p>
+              <h3>₹ 40,000</h3>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <button ion-button color="dark" class="btnPayNow">Pay Now</button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="accordion">
+    <div class="accordRow">
+        <h3 (click)="toggleGroup(1)">Repayment Summary Till Date 
+          <span class="iconArrow" [ngClass]="{'iconArrowAct': index=='1'}"></span>
+        </h3>
+        <div class="accordDetails collapse" [ngClass]="{'expand': index=='1'}">
+          <div class="loanDetailBox">
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-6>
+                    <h5>Number of EMIs Due</h5>
+                    <div class="loadDetValue">25</div>
+                  </ion-col>
+                  <ion-col col-6>
+                      <h5>Number of EMIs Paid</h5>
+                      <div class="loadDetValue">24</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                      <h5>Total Amount Due</h5>
+                      <div class="loadDetValue">₹ 8,50,000</div>
+                    </ion-col>
+                    <ion-col col-6>
+                      <h5>Total Amount Paid </h5>
+                      <div class="loadDetValue">₹ 8,50,000</div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>
+                      <h5>Outstanding EMI Amount</h5>
+                      <div class="loadDetValue">₹ 4,50,000</div>
+                    </ion-col>
+                    <ion-col col-6>
+                      <h5>Future Payable Amount</h5>
+                      <div class="loadDetValue">4,50,000</div>
+                    </ion-col>
+                </ion-row>
+              </ion-grid>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="reminder-box">
+    <h4 class="reminder-click" (click)="showCalendar()">Set Repayment Reminder 
+        <img src="assets/imgs/SVG/notification0.svg" width="15" height="19">
+    </h4>
+    <div class="reminder-content" [ngClass]="isReminderBox ? 'show-reminderBox':'hide-reminderBox'">
+        <p>How many days before your due date would you <br> 
+        like to set a repayment reminder?</p>
+        <div class="reminder-date flex-wrap">
+            <div class="details active">
+                <h3>2</h3>
+                <span>DAYS</span>
+            </div>
+            <div class="details">
+                <h3>5</h3>
+                <span>DAYS</span>
+            </div>
+            <div class="details">
+                <h3>10</h3>
+                <span>DAYS</span>
+            </div>
+        </div>
+        <button ion-button color="dark" class="btnOk" (click)="showCalendar()">Ok</button>
+
+    </div>
+  </div>
+
+  <div class="pay-card-box">
+    <h4>Last 3 Payment Details</h4>
+    <div class="payment-details">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>        
+            <div class="date">
+              <h2>27</h2>
+              <h5>AUG</h5>
+              <p>2018</p> 
+            </div>            
+          </ion-col>
+          <ion-col col-3 class="amount">
+            <div class="details">
+              <h5>Receipt No</h5>
+              <p>568712</p>
+            </div>
+            <div class="details">
+              <h5>Amount</h5>
+              <p>₹ 2,300</p>
+            </div>
+          </ion-col>
+          <ion-col col-6 class="mode">
+            <h5>Mode of Payment</h5>
+            <p>PDC</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-3>        
+              <div class="date">
+                <h2>27</h2>
+                <h5>AUG</h5>
+                <p>2018</p> 
+              </div>            
+            </ion-col>
+            <ion-col col-3 class="amount">
+              <div class="details">
+                <h5>Receipt No</h5>
+                <p>568712</p>
+              </div>
+              <div class="details">
+                <h5>Amount</h5>
+                <p>₹ 2,300</p>
+              </div>
+            </ion-col>
+            <ion-col col-6 class="mode">
+              <h5>Mode of Payment</h5>
+              <p>PDC</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col col-3>        
+                <div class="date">
+                  <h2>27</h2>
+                  <h5>AUG</h5>
+                  <p>2018</p> 
+                </div>            
+              </ion-col>
+              <ion-col col-3 class="amount">
+                <div class="details">
+                  <h5>Receipt No</h5>
+                  <p>568712</p>
+                </div>
+                <div class="details">
+                  <h5>Amount</h5>
+                  <p>₹ 2,300</p>
+                </div>
+              </ion-col>
+              <ion-col col-6 class="mode">
+                <h5>Mode of Payment</h5>
+                <p>PDC</p>
+              </ion-col>
+            </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
