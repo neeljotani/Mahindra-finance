@@ -1,0 +1,360 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+/* @font-face {
+    font-family: 'ArialMT';
+    src: url('../fonts/Arial/ArialMT.eot') format('embedded-opentype'),
+    url('../fonts/Arial/ArialMT.ttf') format('truetype'),
+    url('../fonts/Arial/ArialMT.woff') format('woff'),     
+    url('../fonts/Arial/ArialMT.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  } */
+
+@font-face {
+    font-family: 'Conv_ArialMT';
+    src: url('../assets/fonts/ArialMT.eot');
+    src: local('☺'), url('../assets/fonts/ArialMT.woff') format('woff'), url('../assets/fonts/ArialMT.ttf') format('truetype'), url('../assets/fonts/ArialMT.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Conv_ArialMT';
+}
+ion-app.ios {
+    font-family: 'Conv_ArialMT';
+}
+.segment-button{
+    background: #f4f4f4 !important;
+    border: none;
+    min-height: 40px;                
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #f4f4f4;
+    margin: 0 3px 0 0;
+    color: #000 !important;
+    font-size: 11px !important;
+    font-weight: bold !important;                
+    text-transform: capitalize !important;
+    &[aria-selected=true] .tab-button-text{
+        transform: scale3d(1, 1, 1);
+    }
+    &:last-child{
+        margin: 0 0 0 3px;
+    }
+    &.segment-activated{
+        color: #e31837 !important;
+        border-bottom: 3px solid #e31837 !important;
+    }
+}
+ion-header{
+    /* border-top: 6px solid #e32f44; */
+    padding: 0px 0 0 0;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 3px #eeeeee;
+    height: 55px;
+    background-color: white;
+    /* &:after{
+        content: '';
+        height: 3px !important;
+        background-color: rgb(249,234,90);
+        top: 0px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background-image: none !important;
+    } */
+    .toolbar{
+        min-height: 48px;
+        .toolbar-background{
+            background: transparent;
+            border: none;
+        }
+        .title{
+            padding: 0px;
+            .toolbar-title{
+                text-transform: capitalize;
+                font-size: 16px;
+                color: #323232;
+                font-weight: normal;
+                letter-spacing: 0.5px;
+                text-align: left;
+            }
+        }
+        .icon-Offline{
+            float: right;
+            margin-right: 10px;
+        }
+        .popOverNav{
+            float: right;
+            width: 20px;
+            text-align: right;
+        }
+    }
+    
+}
+.button{
+    min-width: 185px;
+    height: 40px;
+    box-shadow: none !important;
+    border-radius: .35rem;
+    display: block;
+    margin: 0 auto;
+    .button-inner{
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: normal;
+        img{
+            margin-left: 10px;
+        }
+    }
+}
+[padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
+    margin-top: 0px;
+}
+
+.mahLogo{
+    margin-top: 6px;
+}
+.item-input.input-has-focus{
+    .item-inner{
+        box-shadow: none !important;
+    }            
+}
+.main-header { 
+    background: url(../assets/imgs/header-separator.png) no-repeat 100% 100% #e41937;
+}
+.back-button{
+    margin-left: 7px;
+    margin-right: 10px;
+    .ion-ios-arrow-back:before{
+        background: url(../assets/imgs/SVG/Back0.svg) no-repeat 0 0;
+        content: '';
+        width: 25px;
+        height: 25px;
+        background-size: 15px 11px;
+        margin-top: 16px;
+    }
+    .back-button-text{
+        display: none;
+    }
+}
+
+.alert-wrapper{
+    border-radius: 5px !important;
+    background: #f2f2f2 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    .alert-head{
+        text-align: left !important;
+        background-color: #696969;
+        .alert-title{
+            color: #fff;
+            //color: #6d6e71;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin: 0px;
+            text-transform: capitalize;
+        }
+    }
+    .alert-message{
+        text-align: left !important;
+        color: #6d6e71;
+        font-size: 11px;
+        line-height: 16px;
+        text-transform: none;
+        //text-transform: capitalize;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+}
+
+.inptBox{
+    padding-left: 0px;
+    .item-inner{
+        padding-right: 0px !important;
+        .label{
+            margin-top: 0px;
+            color: #323232;
+            font-size: 11px;
+            display: block;
+            width: 100%;
+            padding-top: 2px;
+            opacity: 0.7;
+            text-transform: capitalize;
+            white-space: inherit;
+            text-overflow: initial;
+        }
+        .text-input{
+            color: #6c6d70;
+            font-size: 14px;
+        }
+    }
+}
+.alert-message{
+    padding-top: 10px !important;
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+
+.tabs{
+    .tabbar{
+        /* top: 7px; */
+        bottom: initial !important;
+        background: transparent;
+        padding: 0;
+        border-top: 0px;
+        &::before{
+            background: none !important;
+        }
+        .tab-button{
+            background-color: rgb(239, 239, 239);
+            box-shadow: inset 0.766px -0.643px 5px 0px rgba(0, 0, 0, 0.05);
+            border: none;
+            min-height: 40px;                
+            
+            letter-spacing: 0.5px;
+            
+            margin: 0;
+            color: #949494;
+            font-weight: normal !important;
+            &[aria-selected=true] .tab-button-text{
+                transform: scale3d(1, 1, 1);
+            }
+            .tab-button-text{
+                font-size: 11px;
+                font-weight: bold;                
+                text-transform: capitalize;
+            }
+            &:last-child{
+                margin: 0 0 0 3px;
+            }
+            .icon{
+                display: none;
+            }
+            &[aria-selected=true]{
+                /* color: #e31837;
+                border-bottom: 3px solid #e31837; */
+                background: white;
+                box-shadow: none;
+                z-index: 2;
+                color: #000;
+                  
+            }
+        }
+    }
+}
+ion-tab{
+    top: 60px;
+    .ion-page.show-page ~ .nav-decor{
+        background: transparent !important;
+    }
+}
+
+.accordion{
+    padding: 15px;
+    .accordRow{
+        border-bottom: 1px solid #cfcfcf;
+        position: relative;
+        h3{
+            font-size: 12px;
+            color: #6d6e71;
+            padding: 10px 15px;
+            margin: 0px;
+            .iconArrow{
+                background: url(../assets/imgs/icons/icons-26.png) no-repeat 98% 50%;
+                transition: 0.2s all;
+                width: 14px;
+                height: 8px;
+                display: block;
+                position: absolute;
+                right: 10px;
+                top: 14px;
+                &.iconArrowAct{
+                    transform: rotate(180deg);
+                    transition: 0.2s all;
+                }
+            }
+            
+        }
+        .accordDetails{
+            padding: 0 10px 0px 15px;
+            .loanDetailBox{
+                .grid{
+                    padding: 0px;
+                    .row{
+                        margin: 12px 0;
+                        .col{
+                            padding: 0px;
+                            h5 {
+                                color: #6d6e71;
+                                font-size: 11px;
+                                opacity: 0.7;
+                                padding-bottom: 5px;
+                                margin: 0px;
+                                text-transform: capitalize;
+                                font-weight: normal;
+                            }
+                            .loadDetValue{
+                                color: #484848;
+                                font-size: 12px;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .collapse{
+        
+        transition: all 0.2s ease;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        &.expand{
+            height: 100%;
+            opacity: 1;
+            transition: all 0.2s ease;
+            visibility: visible;
+        }
+    }
+}
+
+.secured {
+    -webkit-text-security: disc;
+    -moz-text-security: disc;
+    text-security: disc;
+}
+.unsecured{
+    -webkit-text-security: none;
+    -moz-text-security: none;
+    text-security: none;
+}
+
+.MFlogo1{
+    width: 209px !important;
+    height: 15px !important;
+}
+.MFlogo2{
+    width: 161px !important;
+    height: 12px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
