@@ -14,8 +14,6 @@ export class LogoutDirective {
 		});
 	}
 
-	performLogout() {
-		GlobalVars.logout();
-	}
+	performLogout() { GlobalVars.logout(); }
 
 }
